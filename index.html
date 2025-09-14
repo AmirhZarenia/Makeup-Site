@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زارع نیا | فروشگاه لوازم آرایشی</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body class="bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 min-h-screen overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Particles Background -->
+    <div class="fixed inset-0 pointer-events-none z-0" id="particles-container"></div>
+
+    <!-- Header -->
+    <header class="glass fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4 py-3">
+            <!-- Top Bar -->
+            <div class="flex items-center justify-between text-sm mb-2">
+                <div class="hidden md:flex items-center space-x-4 space-x-reverse text-gray-600">
+                    <span><i class="fas fa-truck mr-1"></i>ارسال رایگان بالای ۵۰۰ هزار تومان</span>
+                    <span><i class="fas fa-shield-alt mr-1"></i>ضمانت اصالت کالا</span>
+                </div>
+                <div class="flex items-center space-x-2 sm:space-x-4 space-x-reverse">
+                    <div class="flex items-center space-x-2 space-x-reverse">
+                        <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <span class="text-gray-600">۰۲۱-۱۲۳۴۵۶۷۸</span>
+                </div>
+            </div>
+
+            <!-- Main Header -->
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <div class="gradient-rose w-12 h-12 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-palette text-gray-900 text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-rose bg-clip-text text-transparent">زارع نیا</h1>
+                        <p class="text-xs text-gray-500">زیبایی بی‌حد</p>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex flex-1 max-w-2xl mx-4 lg:mx-8">
+                    <div class="relative w-full">
+                        <input type="text" placeholder="جستجو در محصولات..."
+                            class="w-full bg-white/70 backdrop-blur-sm border-0 rounded-full px-6 py-3 pl-12 search-glow focus:outline-none"
+                            id="searchInput">
+                        <button
+                            class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary transition-colors">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <!-- Wishlist -->
+                    <button
+                        class="relative p-3 rounded-full bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:scale-110"
+                        id="wishlistBtn">
+                        <i class="fas fa-heart text-primary"></i>
+                        <span
+                            class="absolute -top-2 -right-2 bg-primary text-gray-900 text-xs w-5 h-5 rounded-full flex items-center justify-center"
+                            id="wishlistCount">3</span>
+                    </button>
+
+                    <!-- Shopping Cart -->
+                    <button
+                        class="relative p-3 rounded-full bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:scale-110"
+                        id="cartBtn">
+                        <i class="fas fa-shopping-bag text-primary"></i>
+                        <span
+                            class="absolute -top-2 -right-2 bg-primary text-gray-900 text-xs w-5 h-5 rounded-full flex items-center justify-center cart-bounce"
+                            id="cartCount">2</span>
+                    </button>
+
+                    <!-- User Account -->
+                    <button
+                        class="p-3 rounded-full bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-user text-primary"></i>
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <button
+                        class="md:hidden p-3 rounded-full bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300"
+                        id="mobileMenuBtn">
+                        <i class="fas fa-bars text-primary"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center justify-center mt-4 space-x-8 space-x-reverse">
+                <a href="#home" class="text-gray-700 hover:text-primary transition-colors font-medium relative group">
+                    صفحه اصلی
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <div class="relative" id="categoriesWrapper">
+                    <button type="button" id="categoriesToggle"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium inline-flex items-center gap-2">
+                        دسته‌بندی‌ها
+                        <i id="categoriesChevron" class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </button>
+                    <!-- Mega Menu -->
+                    <div id="categoriesMenu"
+                        class="absolute top-full right-0 w-96 glass rounded-2xl p-6 opacity-0 invisible transition-all duration-300 mt-2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="#"
+                                class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/20 transition-colors">
+                                <div class="w-10 h-10 gradient-rose rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-tint text-gray-900"></i>
+                                </div>
+                                <span>رژ لب</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/20 transition-colors">
+                                <div class="w-10 h-10 gradient-luxury rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-eye text-gray-900"></i>
+                                </div>
+                                <span>آرایش چشم</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#brands" class="text-gray-700 hover:text-primary transition-colors font-medium relative group"
+                    id="brandsLink">
+                    برندها
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#featured"
+                    class="text-gray-700 hover:text-primary transition-colors font-medium relative group">
+                    پیشنهادات ویژه
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#testimonials"
+                    class="text-gray-700 hover:text-primary transition-colors font-medium relative group">
+                    مجله زیبایی
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contact"
+                    class="text-gray-700 hover:text-primary transition-colors font-medium relative group">
+                    تماس با ما
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenuPanel"
+        class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-md transform -translate-y-full transition-transform duration-300 md:hidden">
+        <div class="max-w-7xl mx-auto px-4 py-6 h-full overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-gray-800">منو</h3>
+                <button id="closeMobileMenu"
+                    class="p-2 rounded-full text-gray-600 hover:text-primary transition-colors">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-3 text-lg">
+                <a href="#home" class="block p-3 rounded-xl glass hover:bg-white/40 transition"
+                    onclick="document.getElementById('closeMobileMenu').click()">صفحه اصلی</a>
+                <a href="#categories" class="block p-3 rounded-xl glass hover:bg-white/40 transition"
+                    onclick="document.getElementById('closeMobileMenu').click()">دسته‌بندی‌ها</a>
+                <a href="#brands" class="block p-3 rounded-xl glass hover:bg-white/40 transition"
+                    onclick="document.getElementById('closeMobileMenu').click()">برندها</a>
+                <a href="#featured" class="block p-3 rounded-xl glass hover:bg-white/40 transition"
+                    onclick="document.getElementById('closeMobileMenu').click()">پیشنهادات ویژه</a>
+                <a href="#testimonials" class="block p-3 rounded-xl glass hover:bg-white/40 transition"
+                    onclick="document.getElementById('closeMobileMenu').click()">مجله زیبایی</a>
+                <a href="#contact" class="block p-3 rounded-xl glass hover:bg-white/40 transition"
+                    onclick="document.getElementById('closeMobileMenu').click()">تماس با ما</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="scroll-anchor relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+        <!-- Background Decorations -->
+        <div class="absolute inset-0">
+            <div class="floating-slow absolute top-20 right-20 w-32 h-32 gradient-rose rounded-full opacity-10"></div>
+            <div class="floating-medium absolute bottom-32 left-20 w-24 h-24 gradient-luxury rounded-full opacity-10">
+            </div>
+            <div class="floating-fast absolute top-40 left-1/3 w-20 h-20 gradient-gold rounded-full opacity-10"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-3 sm:px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="mb-6">
+                        <span
+                            class="inline-block bg-gradient-to-r from-primary to-secondary text-gray-900 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                            <i class="fas fa-gift ml-2"></i>تخفیف ویژه تا ۷۰٪
+                        </span>
+                        <h2 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                            <span class="block gradient-rose bg-clip-text text-transparent">زیبایی</span>
+                            <span class="block text-gray-800">بی‌نهایت</span>
+                        </h2>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                            کالکشن جدید محصولات آرایشی با کیفیت جهانی
+                            <br>
+                            برای زیبایی طبیعی و درخشان شما
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <button
+                            class="btn-premium text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fas fa-shopping-bag mr-2"></i>
+                            خرید کنید
+                        </button>
+                        <button
+                            class="glass text-gray-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-300">
+                            <i class="fas fa-play mr-2"></i>
+                            ویدیو معرفی
+                        </button>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div
+                                class="w-16 h-16 gradient-rose rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-shipping-fast text-gray-900 text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-1">ارسال سریع</h4>
+                            <p class="text-gray-600 text-sm">تحویل در کمتر از ۲۴ ساعت</p>
+                        </div>
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                            <div
+                                class="w-16 h-16 gradient-luxury rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-medal text-gray-900 text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-1">کیفیت برتر</h4>
+                            <p class="text-gray-600 text-sm">محصولات اورجینال و باکیفیت</p>
+                        </div>
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                            <div
+                                class="w-16 h-16 gradient-gold rounded-2xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-crown text-gray-900 text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-1">لوکس ترین</h4>
+                            <p class="text-gray-600 text-sm">برترین برندهای دنیا</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative">
+                        <!-- Main Product Showcase -->
+                        <div class="hero-card hero-tilt p-8 lg:p-10">
+                            <div class="hero-glow"></div>
+                            <div class="text-center">
+                                <div
+                                    class="hero-media w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-3xl flex items-center justify-center mx-auto mb-6 relative overflow-hidden">
+                                    <i class="fas fa-palette text-gray-900 text-8xl drop-shadow"></i>
+                                    <div class="sheen"></div>
+                                    <!-- Floating Elements -->
+                                    <div class="absolute top-5 right-6 w-8 h-8 bg-white/30 rounded-full floating-fast">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-8 left-8 w-6 h-6 bg-white/20 rounded-full floating-medium">
+                                    </div>
+                                    <div class="absolute top-1/2 left-6 w-4 h-4 bg-white/40 rounded-full floating-slow">
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-extrabold text-gray-800 mb-2">کالکشن پاییز ۲۰۲۴</h3>
+                                <p class="text-gray-600 mb-5">محصولات جدید و منحصر به فرد</p>
+                                <div class="flex items-center justify-center gap-3">
+                                    <span class="chip-soft"><i class="fas fa-badge-percent text-primary"></i> ۱۹٪
+                                        تخفیف</span>
+                                    <span class="chip-soft line-through">۳,۲۰۰,۰۰۰</span>
+                                    <span
+                                        class="text-3xl font-extrabold gradient-rose bg-clip-text text-transparent">۲,۵۹۰,۰۰۰</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Products -->
+                        <div class="absolute -top-8 -right-8 glass p-2 rounded-2xl floating-slow" data-aos="fade-down"
+                            data-aos-delay="800">
+                            <div class="w-16 h-16 rounded-2xl overflow-hidden ring-4 ring-white/70">
+                                <img src="assets/images/products/lipgloss.jpg" alt="رژ لب"
+                                    class="w-full h-full object-cover" loading="lazy"
+                                    onerror="this.onerror=null;this.src='assets/images/brands/brand-placeholder.svg'">
+                            </div>
+                            <p class="text-xs text-gray-600 mt-2 text-center">رژ لب</p>
+                        </div>
+
+                        <div class="absolute -bottom-4 -left-8 glass p-2 rounded-2xl floating-medium" data-aos="fade-up"
+                            data-aos-delay="1000">
+                            <div class="w-16 h-16 rounded-2xl overflow-hidden ring-4 ring-white/70">
+                                <img src="assets/images/products/highlighter.jpg" alt="هایلایتر"
+                                    class="w-full h-full object-cover" loading="lazy"
+                                    onerror="this.onerror=null;this.src='assets/images/brands/brand-placeholder.svg'">
+                            </div>
+                            <p class="text-xs text-gray-600 mt-2 text-center">هایلایتر</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="scroll-anchor py-20 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-4xl lg:text-5xl font-bold mb-6 gradient-rose bg-clip-text text-transparent">
+                    دسته‌بندی محصولات
+                </h3>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    از رژ لب‌های رنگارنگ تا پودرهای نرم و کرم‌های مرطوب‌کننده
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Category 1 -->
+                <div class="category-card cat-card cat-tilt p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cat-glare"></div>
+                    <div
+                        class="w-24 h-24 rounded-3xl overflow-hidden ring-4 ring-white/70 mx-auto mb-6 select-none shadow-lg cat-media">
+                        <img src="assets/images/products/lipstick.jpg" alt="رژ لب" class="w-full h-full object-cover"
+                            loading="lazy"
+                            onerror="this.onerror=null;this.src='assets/images/brands/brand-placeholder.svg';this.classList.add('bg-white','p-2');">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-1">رژ لب و لب‌گلاس</h4>
+                    <div class="flex items-center justify-center gap-2 text-xs text-gray-500 mb-4"><i
+                            class="fas fa-box"></i><span>۱۲۵+ محصول</span></div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        رژهای ماندگار و لب‌گلاس‌های براق با طیف رنگی کامل
+                    </p>
+                    <button
+                        class="btn-premium text-gray-900 px-6 py-3 rounded-full font-medium hover:shadow-xl transition-all duration-300">
+                        مشاهده همه
+                    </button>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="category-card cat-card cat-tilt p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cat-glare"></div>
+                    <div
+                        class="w-24 h-24 rounded-3xl overflow-hidden ring-4 ring-white/70 mx-auto mb-6 select-none shadow-lg cat-media">
+                        <img src="assets/images/products/eyeshadow.jpg" alt="آرایش چشم"
+                            class="w-full h-full object-cover" loading="lazy"
+                            onerror="this.onerror=null;this.src='assets/images/brands/brand-placeholder.svg';this.classList.add('bg-white','p-2');">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-1">آرایش چشم</h4>
+                    <div class="flex items-center justify-center gap-2 text-xs text-gray-500 mb-4"><i
+                            class="fas fa-box"></i><span>۹۸+ محصول</span></div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        سایه، ریمل، خط چشم و کانسیلرهای حرفه‌ای
+                    </p>
+                    <button
+                        class="btn-premium text-gray-900 px-6 py-3 rounded-full font-medium hover:shadow-xl transition-all duration-300">
+                        مشاهده همه
+                    </button>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="category-card cat-card cat-tilt p-8 text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="cat-glare"></div>
+                    <div
+                        class="w-24 h-24 rounded-3xl overflow-hidden ring-4 ring-white/70 mx-auto mb-6 select-none shadow-lg cat-media">
+                        <img src="assets/images/products/highlighter.jpg" alt="پودر و کرم پودر"
+                            class="w-full h-full object-cover" loading="lazy"
+                            onerror="this.onerror=null;this.src='assets/images/brands/brand-placeholder.svg';this.classList.add('bg-white','p-2');">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-1">پودر و کرم پودر</h4>
+                    <div class="flex items-center justify-center gap-2 text-xs text-gray-500 mb-4"><i
+                            class="fas fa-box"></i><span>۷۶+ محصول</span></div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        بیس، کانتور، هایلایتر و بلاشرهای حرفه‌ای
+                    </p>
+                    <button
+                        class="btn-premium text-gray-900 px-6 py-3 rounded-full font-medium hover:shadow-xl transition-all duration-300">
+                        مشاهده همه
+                    </button>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="category-card cat-card cat-tilt p-8 text-center" data-aos="fade-up" data-aos-delay="800">
+                    <div class="cat-glare"></div>
+                    <div
+                        class="w-24 h-24 rounded-3xl overflow-hidden ring-4 ring-white/70 mx-auto mb-6 select-none shadow-lg cat-media">
+                        <img src="assets/images/brands/rarebeauty.png" alt="مراقبت پوست"
+                            class="w-full h-full object-cover bg-white" loading="lazy"
+                            onerror="this.onerror=null;this.src='assets/images/brands/brand-placeholder.svg';this.classList.add('bg-white','p-2');">
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-1">مراقبت پوست</h4>
+                    <div class="flex items-center justify-center gap-2 text-xs text-gray-500 mb-4"><i
+                            class="fas fa-box"></i><span>۱۵۴+ محصول</span></div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        روتین‌های مرطوب‌کننده، سرم‌ها و ماسک‌های تخصصی
+                    </p>
+                    <button
+                        class="btn-premium text-gray-900 px-6 py-3 rounded-full font-medium hover:shadow-xl transition-all duration-300">
+                        مشاهده همه
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="scroll-anchor py-20">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-4xl lg:text-5xl font-bold mb-6 gradient-luxury bg-clip-text text-transparent">
+                    محصولات پرفروش
+                </h3>
+                <p class="text-xl text-gray-600">
+                    محبوب‌ترین محصولات انتخاب شده توسط مشتریان ما
+                </p>
+            </div>
+
+            <!-- Product Filter -->
+            <div class="flex justify-center mb-6 md:mb-8 px-2" data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="glass rounded-full p-2 flex space-x-2 space-x-reverse overflow-x-auto whitespace-nowrap max-w-full">
+                    <button
+                        class="px-6 py-3 rounded-full bg-primary chip-active text-gray-900 font-bold product-filter active"
+                        data-filter="all">
+                        همه محصولات
+                    </button>
+                    <button
+                        class="px-6 py-3 rounded-full bg-white text-gray-900 hover:text-primary transition-colors product-filter"
+                        data-filter="lips">
+                        رژ لب
+                    </button>
+                    <button
+                        class="px-6 py-3 rounded-full bg-white text-gray-900 hover:text-primary transition-colors product-filter"
+                        data-filter="eyes">
+                        آرایش چشم
+                    </button>
+                    <button
+                        class="px-6 py-3 rounded-full bg-white text-gray-900 hover:text-primary transition-colors product-filter"
+                        data-filter="face">
+                        آرایش صورت
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="productsGrid">
+                <!-- Product 1 -->
+                <div class="product-card glass rounded-3xl overflow-hidden hover-lift" data-aos="fade-up"
+                    data-aos-delay="300" data-category="lips">
+                    <div class="relative">
+                        <img src="assets/images/products/lipstick.jpg" alt="رژ لب"
+                            class="h-48 md:h-64 w-full object-cover" decoding="async">
+                        <div class="product-overlay">
+                            <div class="flex space-x-2 space-x-reverse justify-center text-gray-900">
+                                <button
+                                    class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors add-to-cart"
+                                    data-product="1">
+                                    <i class="fas fa-shopping-bag text-primary"></i>
+                                </button>
+                                <button
+                                    class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors add-to-wishlist"
+                                    data-product="1">
+                                    <i class="fas fa-heart text-primary"></i>
+                                </button>
+                                <button class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors">
+                                    <i class="fas fa-eye text-primary"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-red-500 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                                ۲۵٪ تخفیف
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 text-sm mr-2 gap-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm">(۱۲۴ نظر)</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">رژ لب مات لورآل</h4>
+                        <p class="text-gray-600 text-sm mb-4">رژ لب ماندگار با فرمول مات</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2 space-x-reverse">
+                                <span class="text-2xl font-bold text-primary">۲۹۵,۰۰۰</span>
+                                <span class="text-sm text-gray-500 price-old">۳۹۰,۰۰۰</span>
+                            </div>
+                            <span class="text-xs text-gray-500">تومان</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card glass rounded-3xl overflow-hidden hover-lift" data-aos="fade-up"
+                    data-aos-delay="400" data-category="eyes">
+                    <div class="relative">
+                        <img src="assets/images/products/eyeshadow.jpg" alt="پالت سایه چشم"
+                            class="h-48 md:h-64 w-full object-cover" decoding="async">
+                        <div class="product-overlay">
+                            <div class="flex space-x-2 space-x-reverse justify-center">
+                                <button
+                                    class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors add-to-cart"
+                                    data-product="2">
+                                    <i class="fas fa-shopping-bag text-primary"></i>
+                                </button>
+                                <button
+                                    class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors add-to-wishlist"
+                                    data-product="2">
+                                    <i class="fas fa-heart text-primary"></i>
+                                </button>
+                                <button class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors">
+                                    <i class="fas fa-eye text-primary"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                                جدید
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 text-sm mr-2 gap-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm">(۸۷ نظر)</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">پالت سایه چشم میبلین</h4>
+                        <p class="text-gray-600 text-sm mb-4">۱۲ رنگ متنوع و باکیفیت</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2 space-x-reverse">
+                                <span class="text-2xl font-bold text-primary">۴۵۰,۰۰۰</span>
+                            </div>
+                            <span class="text-xs text-gray-500">تومان</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card glass rounded-3xl overflow-hidden hover-lift" data-aos="fade-up"
+                    data-aos-delay="500" data-category="face">
+                    <div class="relative">
+                        <img src="assets/images/products/highlighter.jpg" alt="هایلایتر"
+                            class="h-48 md:h-64 w-full object-cover" decoding="async">
+                        <div class="product-overlay">
+                            <div class="flex space-x-2 space-x-reverse justify-center">
+                                <button
+                                    class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors add-to-cart"
+                                    data-product="3">
+                                    <i class="fas fa-shopping-bag text-primary"></i>
+                                </button>
+                                <button
+                                    class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors add-to-wishlist"
+                                    data-product="3">
+                                    <i class="fas fa-heart text-primary"></i>
+                                </button>
+                                <button class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors">
+                                    <i class="fas fa-eye text-primary"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-purple-500 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                                پرفروش
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 text-sm mr-2 gap-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm">(۲۰۳ نظر)</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">هایلایتر فنتی بیوتی</h4>
+                        <p class="text-gray-600 text-sm mb-4">درخشش طبیعی و ماندگار</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2 space-x-reverse">
+                                <span class="text-2xl font-bold text-primary">۶۸۰,۰۰۰</span>
+                                <span class="text-sm text-gray-500 price-old">۷۵۰,۰۰۰</span>
+                            </div>
+                            <span class="text-xs text-gray-500">تومان</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card glass rounded-3xl overflow-hidden hover-lift" data-aos="fade-up"
+                    data-aos-delay="600" data-category="lips">
+                    <div class="relative">
+                        <img src="assets/images/products/lipgloss.jpg" alt="لب‌گلاس"
+                            class="h-48 md:h-64 w-full object-cover" decoding="async">
+                        <div class="product-overlay">
+                            <div class="flex space-x-2 space-x-reverse justify-center">
+                                <button
+                                    class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors add-to-cart"
+                                    data-product="4">
+                                    <i class="fas fa-shopping-bag text-primary"></i>
+                                </button>
+                                <button
+                                    class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors add-to-wishlist"
+                                    data-product="4">
+                                    <i class="fas fa-heart text-primary"></i>
+                                </button>
+                                <button class="bg-white/90 p-3 rounded-full hover:bg-white transition-colors">
+                                    <i class="fas fa-eye text-primary"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-red-500 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                                ۴۰٪ تخفیف
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 text-sm mr-2 gap-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm">(۹۶ نظر)</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">لب‌گلاس کرم رار بیوتی</h4>
+                        <p class="text-gray-600 text-sm mb-4">حجم دهنده و درخشان کننده</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2 space-x-reverse">
+                                <span class="text-2xl font-bold text-primary">۱۸۰,۰۰۰</span>
+                                <span class="text-sm text-gray-500 price-old">۳۰۰,۰۰۰</span>
+                            </div>
+                            <span class="text-xs text-gray-500">تومان</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button class="btn-premium text-gray-900 px-8 py-4 rounded-full font-bold text-lg">
+                    مشاهده همه محصولات
+                    <i class="fas fa-arrow-left mr-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Showcase -->
+    <section id="brands" class="scroll-anchor py-20 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-4xl lg:text-5xl font-bold mb-6 gradient-gold bg-clip-text text-transparent">
+                    برندهای مطرح
+                </h3>
+                <p class="text-xl text-gray-600">
+                    نمایندگی رسمی معتبرترین برندهای آرایشی دنیا
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+                <div class="glass rounded-2xl p-6 text-center hover-lift" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/brands/loreal.png" alt="لورآل"
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl object-contain bg-white" loading="lazy">
+                    <h4 class="font-bold text-gray-800">لورآل</h4>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center hover-lift" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/brands/maybelline.png" alt="میبلین"
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl object-contain bg-white" loading="lazy">
+                    <h4 class="font-bold text-gray-800">میبلین</h4>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center hover-lift" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/brands/fenty.png" alt="فنتی"
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl object-contain bg-white" loading="lazy">
+                    <h4 class="font-bold text-gray-800">فنتی</h4>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center hover-lift" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/images/brands/rarebeauty.png" alt="رار بیوتی"
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl object-contain bg-white" loading="lazy">
+                    <h4 class="font-bold text-gray-800">رار بیوتی</h4>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center hover-lift" data-aos="fade-up" data-aos-delay="600">
+                    <img src="assets/images/brands/mac.png" alt="مک"
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl object-contain bg-white" loading="lazy">
+                    <h4 class="font-bold text-gray-800">مک</h4>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center hover-lift" data-aos="fade-up" data-aos-delay="700">
+                    <img src="assets/images/brands/chanel.png" alt="شانل"
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl object-contain bg-white" loading="lazy">
+                    <h4 class="font-bold text-gray-800">شانل</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Pro) -->
+    <section id="testimonials" class="scroll-anchor py-24">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4">
+            <div class="flex items-end justify-between mb-8" data-aos="fade-up">
+                <div class="text-right">
+                    <h3 class="text-4xl lg:text-5xl font-extrabold gradient-purple bg-clip-text text-transparent mb-3">
+                        نظرات مشتریان</h3>
+                    <p class="text-gray-600">تجربه واقعی مشتریان از خرید در زارع نیا</p>
+                </div>
+
+            </div>
+
+            <div class="relative testi-stage" data-aos="fade-up" data-aos-delay="100">
+                <div id="testiTrack"
+                    class="flex gap-6 lg:gap-8 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory items-stretch pr-1 group">
+                    <!-- Card 1 -->
+                    <article class="min-w-[86%] sm:min-w-[58%] lg:min-w-[38%] snap-center">
+                        <div class="testi-card testi-tilt p-6 sm:p-8 h-full">
+                            <div class="testi-glare"></div>
+                            <span class="testi-quote">“</span>
+                            <div class="flex items-center gap-4 layer-1">
+                                <img src="https://i.pravatar.cc/160?img=32" alt="avatar"
+                                    class="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl object-cover ring-4 ring-white/70">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="font-extrabold text-gray-800">سارا احمدی</h4>
+                                        <span
+                                            class="px-2 py-1 rounded-lg text-xs bg-emerald-100 text-emerald-700 flex items-center gap-1"><i
+                                                class="fas fa-circle-check text-emerald-500"></i> تأیید شده</span>
+                                    </div>
+                                    <div class="flex text-yellow-400 text-sm gap-1 mt-1"><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mt-6 layer-2">فوق‌العاده بود! کیفیت محصولات دقیقاً
+                                همونیه که انتظار داشتم و بسته‌بندی خیلی شیکی داشت.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="min-w-[86%] sm:min-w-[58%] lg:min-w-[38%] snap-center">
+                        <div class="testi-card testi-tilt p-6 sm:p-8 h-full">
+                            <div class="testi-glare"></div>
+                            <span class="testi-quote">“</span>
+                            <div class="flex items-center gap-4 layer-1">
+                                <img src="https://i.pravatar.cc/160?img=5" alt="avatar"
+                                    class="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl object-cover ring-4 ring-white/70">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="font-extrabold text-gray-800">مریم کریمی</h4>
+                                        <span
+                                            class="px-2 py-1 rounded-lg text-xs bg-emerald-100 text-emerald-700 flex items-center gap-1"><i
+                                                class="fas fa-circle-check text-emerald-500"></i> تأیید شده</span>
+                                    </div>
+                                    <div class="flex text-yellow-400 text-sm gap-1 mt-1"><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mt-6 layer-2">ارسال به‌موقع انجام شد و تیم پشتیبانی
+                                خیلی محترمانه پیگیری کردند. تجربه خرید عالی بود.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="min-w-[86%] sm:min-w-[58%] lg:min-w-[38%] snap-center">
+                        <div class="testi-card testi-tilt p-6 sm:p-8 h-full">
+                            <div class="testi-glare"></div>
+                            <span class="testi-quote">“</span>
+                            <div class="flex items-center gap-4 layer-1">
+                                <img src="https://i.pravatar.cc/160?img=15" alt="avatar"
+                                    class="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl object-cover ring-4 ring-white/70">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="font-extrabold text-gray-800">زهرا محمدی</h4>
+                                        <span
+                                            class="px-2 py-1 rounded-lg text-xs bg-emerald-100 text-emerald-700 flex items-center gap-1"><i
+                                                class="fas fa-circle-check text-emerald-500"></i> تأیید شده</span>
+                                    </div>
+                                    <div class="flex text-yellow-400 text-sm gap-1 mt-1"><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mt-6 layer-2">قیمت‌ها مناسبه و تخفیف‌ها واقعی هستن.
+                                از خرید هایلایتر خیلی راضی‌ام، درخشش طبیعی داره.</p>
+                        </div>
+                    </article>
+                </div>
+
+
+            </div>
+
+            <!-- Dots -->
+            <div class="flex justify-center gap-2 mt-8" id="testiDots">
+                <button class="w-2.5 h-2.5 rounded-full bg-gray-300 aria-selected:bg-primary"
+                    aria-selected="true"></button>
+                <button class="w-2.5 h-2.5 rounded-full bg-gray-300"></button>
+                <button class="w-2.5 h-2.5 rounded-full bg-gray-300"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter"
+        class="scroll-anchor py-20 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="floating-slow absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full"></div>
+            <div class="floating-medium absolute bottom-20 left-20 w-24 h-24 bg-white/10 rounded-full"></div>
+            <div class="floating-fast absolute top-1/2 left-1/3 w-16 h-16 bg-white/10 rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-3 sm:px-4 relative z-10">
+            <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+                <h3 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+                    عضویت در خبرنامه
+                </h3>
+                <p class="text-xl text-gray-800 mb-8 leading-relaxed">
+                    اولین نفری باشید که از جدیدترین محصولات، تخفیف‌ها و نکات آرایشی باخبر می‌شوید
+                </p>
+
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <input type="email" placeholder="آدرس ایمیل شما"
+                        class="flex-1 px-6 py-4 rounded-full bg-white/85 backdrop-blur-sm border-0 text-gray-900 placeholder-gray-500 focus:outline-none focus:bg-white transition-all duration-300">
+                    <button type="submit"
+                        class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-white/90 transition-all duration-300 hover:scale-105">
+                        عضویت
+                    </button>
+                </form>
+
+                <div class="flex items-center justify-center mt-8 space-x-6 space-x-reverse text-gray-800">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-gift"></i>
+                        <span>هدایای ویژه</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-tag"></i>
+                        <span>تخفیف‌های اختصاصی</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-bell"></i>
+                        <span>اطلاع از جدیدترین‌ها</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="scroll-anchor bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 sm:gap-4 mb-6">
+                        <div class="gradient-rose w-12 h-12 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-palette text-gray-900 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold gradient-rose bg-clip-text text-transparent">زارع نیا</h3>
+                            <p class="text-gray-400 text-sm">زیبایی بی‌حد</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        زارع نیا با هدف ارائه بهترین محصولات آرایشی و زیبایی، مرجع اعتماد شما برای خرید آنلاین محصولات
+                        اورجینال است.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#"
+                            class="bg-gradient-to-r from-pink-500 to-red-500 p-3 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-110">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-gradient-to-r from-green-500 to-green-600 p-3 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-110">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="text-lg font-bold mb-6 gradient-luxury bg-clip-text text-transparent">دسترسی سریع</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">درباره ما</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">تماس با ما</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">سوالات متداول</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">راهنمای خرید</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">رویه بازگرداندن</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div data-aos="fade-up" data-aos-delay="600">
+                    <h4 class="text-lg font-bold mb-6 gradient-gold bg-clip-text text-transparent">دسته‌بندی‌ها</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">رژ لب و لب‌گلاس</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">آرایش چشم</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">پودر و کرم پودر</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">مراقبت پوست</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">عطر و ادکلن</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">لوازم جانبی</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div data-aos="fade-up" data-aos-delay="800">
+                    <h4 class="text-lg font-bold mb-6 gradient-purple bg-clip-text text-transparent">اطلاعات تماس</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <span class="text-gray-400">تهران، خیابان ولیعصر، پلاک ۱۲۳</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <span class="text-gray-400">۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span class="text-gray-400">info@glamorous.ir</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-clock text-primary"></i>
+                            <span class="text-gray-400">۲۴ ساعته، ۷ روز هفته</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 mb-4">
+                    © ۱۴۰۳ زارع نیا. تمام حقوق محفوظ است.
+                </p>
+                <div class="flex justify-center space-x-6 space-x-reverse">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' fill='%23888'%3E%3Crect width='40' height='25' rx='4'/%3E%3Ctext x='20' y='17' text-anchor='middle' fill='white' font-size='10'%3EVISA%3C/text%3E%3C/svg%3E"
+                        alt="Visa" class="opacity-60">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' fill='%23888'%3E%3Crect width='40' height='25' rx='4'/%3E%3Ctext x='20' y='17' text-anchor='middle' fill='white' font-size='8'%3EMaster%3C/text%3E%3C/svg%3E"
+                        alt="MasterCard" class="opacity-60">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' fill='%23888'%3E%3Crect width='40' height='25' rx='4'/%3E%3Ctext x='20' y='17' text-anchor='middle' fill='white' font-size='9'%3EPayPal%3C/text%3E%3C/svg%3E"
+                        alt="PayPal" class="opacity-60">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Backdrop -->
+    <div id="cartBackdrop" class="fixed inset-0 bg-black/40 z-40 opacity-0 pointer-events-none transition-opacity">
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="fixed top-0 right-0 h-full w-96 glass z-50 transform translate-x-full transition-transform duration-300"
+        id="cartSidebar">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">سبد خرید</h3>
+                <button class="text-gray-600 hover:text-primary transition-colors" id="closeCart">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <div class="space-y-4 mb-6" id="cartItems">
+                <!-- Cart items will be inserted here -->
+            </div>
+
+            <div class="border-t pt-4">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-bold text-gray-800">جمع کل:</span>
+                    <span class="text-2xl font-bold text-primary" id="cartTotal">۰ تومان</span>
+                </div>
+                <button class="btn-premium text-gray-900 w-full py-4 rounded-2xl font-bold text-lg">
+                    تکمیل خرید
+                    <i class="fas fa-arrow-left mr-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast fixed top-20 left-4 glass p-4 rounded-2xl z-50" id="toast">
+        <div class="flex items-center">
+            <div class="w-12 h-12 gradient-rose rounded-xl flex items-center justify-center mr-3">
+                <i class="fas fa-check text-gray-900"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-800">محصول اضافه شد</h4>
+                <p class="text-gray-600 text-sm">به سبد خرید اضافه شد</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="fixed inset-0 bg-gradient-to-br from-primary to-secondary z-50 flex items-center justify-center"
+        id="loadingScreen">
+        <div class="text-center">
+            <div
+                class="gradient-rose w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 animate-pulse">
+                <i class="fas fa-palette text-gray-900 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">زارع نیا</h3>
+            <div class="loading-dots">
+                <div class="loading-dot bg-primary"></div>
+                <div class="loading-dot bg-primary"></div>
+                <div class="loading-dot bg-primary"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
